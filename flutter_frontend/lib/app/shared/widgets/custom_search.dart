@@ -9,13 +9,13 @@ class CustomSearch extends StatefulWidget {
   final Function(String) onChanged;
   final String? Function(String?)? validator;
   const CustomSearch({
-    Key? key,
+    super.key,
     required this.searchController,
     this.preffixIconSearch,
     required this.hintTextSearch,
     required this.onChanged,
     this.validator,
-  }) : super(key: key);
+  });
 
   @override
   State<CustomSearch> createState() => _CustomSearchState();

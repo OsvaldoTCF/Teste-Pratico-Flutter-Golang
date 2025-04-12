@@ -13,12 +13,12 @@ class CardsOneStudent extends StatefulWidget {
   TextEditingController controllerName;
 
   CardsOneStudent({
-    Key? key,
+    super.key,
     required this.store,
     required this.createStudentStore,
     required this.updateStudentStore,
     required this.controllerName,
-  }) : super(key: key);
+  });
 
   @override
   State<CardsOneStudent> createState() => _CardsOneStudentState();

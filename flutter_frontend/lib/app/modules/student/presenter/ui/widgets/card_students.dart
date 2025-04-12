@@ -13,11 +13,11 @@ class CardStudents extends StatefulWidget {
   CreateStudentStore createStudentStore;
   UpdateStudentStore updateStudentStore;
   CardStudents({
-    Key? key,
+    super.key,
     required this.store,
     required this.createStudentStore,
     required this.updateStudentStore,
-  }) : super(key: key);
+  });
 
   @override
   State<CardStudents> createState() => _CardStudentsState();

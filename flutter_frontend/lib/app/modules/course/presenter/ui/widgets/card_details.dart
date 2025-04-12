@@ -13,13 +13,13 @@ class CardDetails extends StatefulWidget {
   ListCourseStore listCourseStore;
   CreateCourseStore createCourseStore;
   CardDetails({
-    Key? key,
+    super.key,
     required this.code,
     required this.description,
     required this.ementa,
     required this.listCourseStore,
     required this.createCourseStore,
-  }) : super(key: key);
+  });
 
   @override
   State<CardDetails> createState() => _CardDetailsState();

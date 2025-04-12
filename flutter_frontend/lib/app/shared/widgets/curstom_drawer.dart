@@ -23,7 +23,9 @@ class _CustomDrawerState extends State<CustomDrawer> {
   Widget build(BuildContext context) {
     return Observer(
       builder: (_) {
-        return Container(
+        return SizedBox(
+          width: 300,
+          height: 240,
           child: Drawer(
             backgroundColor: Color(0xff87ceeb),
             elevation: 10,
@@ -90,8 +92,6 @@ class _CustomDrawerState extends State<CustomDrawer> {
                   ]),
             ),
           ),
-          width: 300,
-          height: 240,
         );
       },
     );

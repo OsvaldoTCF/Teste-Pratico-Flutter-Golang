@@ -11,11 +11,11 @@ class CardCourses extends StatefulWidget {
   ListCourseStore listCourseStore;
   UpdateCourseStore updateCourseStore;
   CardCourses({
-    Key? key,
+    super.key,
     required this.createCourseStore,
     required this.listCourseStore,
     required this.updateCourseStore,
-  }) : super(key: key);
+  });
 
   @override
   State<CardCourses> createState() => _CardCoursesState();

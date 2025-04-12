@@ -12,11 +12,11 @@ class CardsCoursesContent extends StatefulWidget {
   ListCourseStore listCourseStore;
   UpdateCourseStore updateCourseStore;
   CardsCoursesContent({
-    Key? key,
+    super.key,
     required this.createCourseStore,
     required this.listCourseStore,
     required this.updateCourseStore,
-  }) : super(key: key);
+  });
 
   @override
   State<CardsCoursesContent> createState() => _CardsCoursesContentState();
@@ -73,7 +73,7 @@ class _CardsCoursesContentState extends State<CardsCoursesContent> {
                                       Icons.book_outlined,
                                     ),
                                   ),
-                                  trailing: Container(
+                                  trailing: SizedBox(
                                     width: 150,
                                     child: Row(
                                       children: [
@@ -107,7 +107,6 @@ class _CardsCoursesContentState extends State<CardsCoursesContent> {
                                                     .Ementa;
                                                 modalEditCourse.call();
                                               },
-                                              child: Icon(Icons.edit_outlined),
                                               style: ButtonStyle(
                                                 backgroundColor:
                                                     WidgetStatePropertyAll(
@@ -116,7 +115,8 @@ class _CardsCoursesContentState extends State<CardsCoursesContent> {
                                                             213,
                                                             223,
                                                             106)),
-                                              )),
+                                              ),
+                                              child: Icon(Icons.edit_outlined)),
                                         ),
                                         SizedBox(
                                           width: 5,
@@ -142,13 +142,13 @@ class _CardsCoursesContentState extends State<CardsCoursesContent> {
                                                           .Ementa
                                                     ]);
                                               },
-                                              child: Icon(Icons.info_outline),
                                               style: ButtonStyle(
                                                 backgroundColor:
                                                     WidgetStatePropertyAll(
                                                         const Color(
                                                             0xff87ceeb)),
-                                              )),
+                                              ),
+                                              child: Icon(Icons.info_outline)),
                                         ),
                                       ],
                                     ),

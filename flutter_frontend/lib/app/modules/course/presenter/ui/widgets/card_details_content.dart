@@ -10,12 +10,12 @@ class CardDetailsContent extends StatefulWidget {
   ListCourseStore listCourseStore;
 
   CardDetailsContent({
-    Key? key,
+    super.key,
     required this.code,
     required this.description,
     required this.ementa,
     required this.listCourseStore,
-  }) : super(key: key);
+  });
 
   @override
   State<CardDetailsContent> createState() => _CardDetailsContentState();
@@ -89,8 +89,7 @@ class _CardDetailsContentState extends State<CardDetailsContent> {
                             onPressed: null,
                             style: ButtonStyle(
                                 backgroundColor: widget.listCourseStore
-                                            .listStudentCourse.length ==
-                                        0
+                                            .listStudentCourse.isEmpty
                                     ? WidgetStatePropertyAll(
                                         Color(0xffdc3545))
                                     : WidgetStatePropertyAll(widget
@@ -100,9 +99,7 @@ class _CardDetailsContentState extends State<CardDetailsContent> {
                                             10
                                         ? Color(0xff2ecc71)
                                         : Color(0xffffc107))),
-                            child: widget.listCourseStore.listStudentCourse
-                                        .length ==
-                                    0
+                            child: widget.listCourseStore.listStudentCourse.isEmpty
                                 ? Text("Vazio",
                                     style: TextStyle(color: Colors.white))
                                 : Text(
