@@ -1,5 +1,4 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first, must_be_immutable
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: public_member_api_docs, sort_constructors_first, must_be_immutables
 import 'package:flutter/material.dart';
 import 'package:workspace/app/modules/course/presenter/store/create_course_store.dart';
 import 'package:workspace/app/modules/course/presenter/store/list_course_store.dart';
@@ -63,7 +62,7 @@ class _CardDetailsState extends State<CardDetails> {
                       },
                       style: const ButtonStyle(
                           backgroundColor:
-                              MaterialStatePropertyAll(Color(0xff2ecc71))),
+                              WidgetStatePropertyAll(Color(0xff2ecc71))),
                       child: const Text(
                         "Adicionar aluno",
                         style: TextStyle(fontSize: 17, color: Colors.white),

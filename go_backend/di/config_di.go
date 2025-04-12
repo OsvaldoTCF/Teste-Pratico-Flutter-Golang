@@ -1,23 +1,25 @@
 package di
 
 import (
-	d "go.uber.org/dig"
-
-	"github.com/Lucas-Linhar3s/Teste-Pratico-Flutter-Golang/backend/pkg/http/server"
+	"github.com/Lucas-Linhar3s/Teste-Pratico-Flutter-Golang/adapters/http/handler"
+	"github.com/Lucas-Linhar3s/Teste-Pratico-Flutter-Golang/adapters/http/service"
+	"github.com/Lucas-Linhar3s/Teste-Pratico-Flutter-Golang/adapters/postgres"
+	"github.com/Lucas-Linhar3s/Teste-Pratico-Flutter-Golang/adapters/postgres/repository"
+	"github.com/Lucas-Linhar3s/Teste-Pratico-Flutter-Golang/core/usecases"
 )
 
-func RegisterDI(container *d.Container) error {
-	for _, v := range Dependencies {
-		if err := container.Provide(v.Constructor, d.Name(v.Token)); err != nil {
-			return err
-		}
-	}
+func ConfigCourseDI(conn *postgres.Postgres) service.ICourseService {
+	courseRepository := repository.NewCourseRepository(conn)
+	courseUsecase := usecases.NewCourseUsecase(courseRepository)
+	courseService := handler.NewCourseService(courseUsecase)
 
-	if err := container.Provide(func () []server.Module {
-		return Modules(container);
-	}); err != nil {
-		return err
-	}
+	return courseService
+}
 
-	return nil
+func ConfigStudentDI(conn *postgres.Postgres) service.IStudentService {
+	studentRepository := repository.NewStudentRepository(conn)
+	studentUsecase := usecases.NewStudentUsecase(studentRepository)
+	studentService := handler.NewStudentService(studentUsecase)
+
+	return studentService
 }

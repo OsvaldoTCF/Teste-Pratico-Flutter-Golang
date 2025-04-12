@@ -54,7 +54,7 @@ class _CardCoursesState extends State<CardCourses> {
                       },
                       style: const ButtonStyle(
                           backgroundColor:
-                              MaterialStatePropertyAll(Color(0xff2ecc71))),
+                              WidgetStatePropertyAll(Color(0xff2ecc71))),
                       child: const Text(
                         "Novo Curso",
                         style: TextStyle(fontSize: 17, color: Colors.white),

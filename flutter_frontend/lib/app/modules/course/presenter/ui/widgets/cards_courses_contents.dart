@@ -1,5 +1,4 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first, must_be_immutable
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: public_member_api_docs, sort_constructors_first, must_be_immutables
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -111,7 +110,7 @@ class _CardsCoursesContentState extends State<CardsCoursesContent> {
                                               child: Icon(Icons.edit_outlined),
                                               style: ButtonStyle(
                                                 backgroundColor:
-                                                    MaterialStatePropertyAll(
+                                                    WidgetStatePropertyAll(
                                                         const Color.fromARGB(
                                                             255,
                                                             213,
@@ -146,7 +145,7 @@ class _CardsCoursesContentState extends State<CardsCoursesContent> {
                                               child: Icon(Icons.info_outline),
                                               style: ButtonStyle(
                                                 backgroundColor:
-                                                    MaterialStatePropertyAll(
+                                                    WidgetStatePropertyAll(
                                                         const Color(
                                                             0xff87ceeb)),
                                               )),

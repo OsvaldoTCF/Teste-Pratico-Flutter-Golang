@@ -56,7 +56,7 @@ class _CardStudentsState extends State<CardStudents> {
                                 message: "Cancelar",
                                 child: ElevatedButton(
                                   style: const ButtonStyle(
-                                      backgroundColor: MaterialStatePropertyAll(
+                                      backgroundColor: WidgetStatePropertyAll(
                                           Colors.redAccent)),
                                   onPressed: () {
                                     if (widget.store.editing == false) {
@@ -86,7 +86,7 @@ class _CardStudentsState extends State<CardStudents> {
                                         widget.store.addNewRow();
                                       },
                                 style: ButtonStyle(
-                                    backgroundColor: MaterialStatePropertyAll(
+                                    backgroundColor: WidgetStatePropertyAll(
                                         widget.store.enable != null
                                             ? const Color.fromARGB(
                                                 255, 164, 189, 199)

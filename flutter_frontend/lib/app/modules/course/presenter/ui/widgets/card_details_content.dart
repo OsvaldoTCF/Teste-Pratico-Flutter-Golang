@@ -1,5 +1,4 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first, must_be_immutable
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: public_member_api_docs, sort_constructors_first, must_be_immutables
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:workspace/app/modules/course/presenter/store/list_course_store.dart';
@@ -92,9 +91,9 @@ class _CardDetailsContentState extends State<CardDetailsContent> {
                                 backgroundColor: widget.listCourseStore
                                             .listStudentCourse.length ==
                                         0
-                                    ? MaterialStatePropertyAll(
+                                    ? WidgetStatePropertyAll(
                                         Color(0xffdc3545))
-                                    : MaterialStatePropertyAll(widget
+                                    : WidgetStatePropertyAll(widget
                                                 .listCourseStore
                                                 .listStudentCourse
                                                 .length >=

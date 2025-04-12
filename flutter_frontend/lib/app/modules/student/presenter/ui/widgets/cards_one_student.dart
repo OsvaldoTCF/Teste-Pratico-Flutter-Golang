@@ -1,5 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first, use_build_context_synchronously, sort_child_properties_last, prefer_const_declarations, must_be_immutable
-import 'package:cool_alert/cool_alert.dart';
+import 'package:cooler_alerts/cooler_alerts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:workspace/app/modules/student/presenter/store/create_student_store.dart';
@@ -126,7 +126,7 @@ class _CardsOneStudentState extends State<CardsOneStudent> {
                                                             widget.store
                                                                     .editing =
                                                                 false;
-                                                            await CoolAlert
+                                                            await CoolerAlerts
                                                                 .show(
                                                               width: 500,
                                                               context: context,
@@ -136,7 +136,7 @@ class _CardsOneStudentState extends State<CardsOneStudent> {
                                                               title:
                                                                   "Aluno editado",
                                                               onConfirmBtnTap:
-                                                                  () {
+                                                                  (_) {
                                                                 widget.store
                                                                         .editing =
                                                                     false;
@@ -150,7 +150,7 @@ class _CardsOneStudentState extends State<CardsOneStudent> {
                                                                   true,
                                                             );
                                                           } else {
-                                                            await CoolAlert
+                                                            await CoolerAlerts
                                                                 .show(
                                                               width: 500,
                                                               context: context,
@@ -172,7 +172,7 @@ class _CardsOneStudentState extends State<CardsOneStudent> {
                                                           if (success) {
                                                             widget.store
                                                                 .enable = null;
-                                                            await CoolAlert
+                                                            await CoolerAlerts
                                                                 .show(
                                                               width: 500,
                                                               context: context,
@@ -182,7 +182,7 @@ class _CardsOneStudentState extends State<CardsOneStudent> {
                                                               title:
                                                                   "Aluno cadastrado",
                                                               onConfirmBtnTap:
-                                                                  () {
+                                                                  (_) {
                                                                 widget.store
                                                                         .editing =
                                                                     false;
@@ -196,7 +196,7 @@ class _CardsOneStudentState extends State<CardsOneStudent> {
                                                                   true,
                                                             );
                                                           } else {
-                                                            await CoolAlert.show(
+                                                            await CoolerAlerts.show(
                                                                 width: 500,
                                                                 context:
                                                                     context,
@@ -213,7 +213,7 @@ class _CardsOneStudentState extends State<CardsOneStudent> {
                                                 child: const Icon(Icons.check),
                                                 style: ButtonStyle(
                                                   backgroundColor:
-                                                      MaterialStatePropertyAll(
+                                                      WidgetStatePropertyAll(
                                                           widget.store.editing
                                                               ? const Color
                                                                   .fromARGB(255,
@@ -271,7 +271,7 @@ class _CardsOneStudentState extends State<CardsOneStudent> {
                                                 child: const Icon(Icons.edit),
                                                 style: ButtonStyle(
                                                   backgroundColor:
-                                                      MaterialStatePropertyAll(
+                                                      WidgetStatePropertyAll(
                                                           widget.store.enable != null
                                                               ? const Color
                                                                   .fromARGB(255,

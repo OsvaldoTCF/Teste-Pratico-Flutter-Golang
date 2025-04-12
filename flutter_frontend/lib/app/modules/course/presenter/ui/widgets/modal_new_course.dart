@@ -1,6 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:cool_alert/cool_alert.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:cooler_alerts/cooler_alerts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -135,7 +134,7 @@ class ModalNewCourse {
                                 Modular.to.pop();
                               },
                               style: ButtonStyle(
-                                  backgroundColor: MaterialStatePropertyAll(
+                                  backgroundColor: WidgetStatePropertyAll(
                                       Color.fromARGB(255, 226, 206, 91))),
                               child: Text('Cancelar'),
                             ),
@@ -154,18 +153,18 @@ class ModalNewCourse {
                                               .newCourse();
                                           if (success) {
                                             Modular.to.pop();
-                                            await CoolAlert.show(
+                                            await CoolerAlerts.show(
                                               width: 500,
                                               context: context,
                                               type: CoolAlertType.success,
                                               title: "Curso cadastrado",
-                                              onConfirmBtnTap: () {
+                                              onConfirmBtnTap: (_) {
                                                 listCourseStore.listAll();
                                               },
                                               closeOnConfirmBtnTap: true,
                                             );
                                           } else {
-                                            await CoolAlert.show(
+                                            await CoolerAlerts.show(
                                               width: 500,
                                               context: context,
                                               type: CoolAlertType.error,
@@ -175,7 +174,7 @@ class ModalNewCourse {
                                           }
                                         },
                                   style: ButtonStyle(
-                                      backgroundColor: MaterialStatePropertyAll(
+                                      backgroundColor: WidgetStatePropertyAll(
                                           createCourseStore
                                                       .description.isEmpty ||
                                                   createCourseStore

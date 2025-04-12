@@ -1,6 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:cool_alert/cool_alert.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:cooler_alerts/cooler_alerts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -139,7 +138,7 @@ class ModalEditCourse {
                                 Modular.to.pop();
                               },
                               style: ButtonStyle(
-                                  backgroundColor: MaterialStatePropertyAll(
+                                  backgroundColor: WidgetStatePropertyAll(
                                       Color.fromARGB(255, 226, 206, 91))),
                               child: Text('Cancelar'),
                             ),
@@ -158,30 +157,30 @@ class ModalEditCourse {
                                               .upCourse();
                                           if (success) {
                                             Modular.to.pop();
-                                            await CoolAlert.show(
+                                            await CoolerAlerts.show(
                                               width: 500,
                                               context: context,
                                               type: CoolAlertType.success,
                                               title: "Curso editado",
-                                              onConfirmBtnTap: () {
+                                              onConfirmBtnTap: (_) {
                                                 Modular.to.canPop();
                                                 listCourseStore.listAll();
                                               },
                                             );
                                           } else {
-                                            await CoolAlert.show(
+                                            await CoolerAlerts.show(
                                               width: 500,
                                               context: context,
                                               type: CoolAlertType.error,
                                               title: "Erro ao editar curso",
-                                              onConfirmBtnTap: () {
+                                              onConfirmBtnTap: (_) {
                                                 Modular.to.canPop();
                                               },
                                             );
                                           }
                                         },
                                   style: ButtonStyle(
-                                      backgroundColor: MaterialStatePropertyAll(
+                                      backgroundColor: WidgetStatePropertyAll(
                                           controllerDescription.text.isEmpty ||
                                                   controllerEmenta.text.isEmpty
                                               ? Color.fromARGB(

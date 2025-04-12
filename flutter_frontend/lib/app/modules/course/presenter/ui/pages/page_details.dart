@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:workspace/app/modules/course/presenter/store/create_course_store.dart';
@@ -32,9 +31,6 @@ class _PageDetailsState extends State<PageDetails> {
     }
     if (args[2] != null) {
       ementa.text = args[2];
-    }
-    if (args == null) {
-      Modular.to.navigate('/courses/');
     }
     final screenSize = MediaQuery.of(context).size;
     final screenWidth = screenSize.width;

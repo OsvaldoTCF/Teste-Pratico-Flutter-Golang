@@ -16,10 +16,10 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 1.0.0+1
+version: 1.0.0+2
 
 environment:
-  sdk: '>=3.2.5 <4.0.0'
+  sdk: '>=3.7.0 <4.0.0'
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -33,16 +33,27 @@ dependencies:
 
 
   # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
-  flutter_modular: ^6.3.2
-  mobx: ^2.3.0+1
-  flutter_mobx: ^2.2.0+2
-  dio: ^5.4.0
-  build_runner: ^2.4.8
-  flutter_secure_storage: ^4.2.1
-  flutter_secure_storage_windows: ^3.0.0
-  cool_alert: ^2.0.1
+  # Use with the CupertinoIcons class for iOS style icons. 
+  flutter_modular:
+  mobx: 
+  flutter_mobx:
+  dio:
+  build_runner:
+  
+  cooler_alerts: ^2.1.2
+  #cool_alert: 
+  # flare_flutter:
+  #       git:
+  #         url: https://github.com/mbfakourii/Flare-Flutter.git
+  #         path: flare_flutter
+  #         ref: remove_hashValues
+
+  # https://github.com/juliansteenbakker/flutter_secure_storage/tree/v9.2.4
+  flutter_secure_storage:
+        git:
+          url: https://github.com/juliansteenbakker/flutter_secure_storage.git
+          path: flutter_secure_storage
+          ref: v10.0.0-beta.4
 
 dev_dependencies:
   flutter_test:
@@ -53,8 +64,8 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^2.0.0
-  mobx_codegen: ^2.6.0+1
+  flutter_lints:
+  mobx_codegen:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

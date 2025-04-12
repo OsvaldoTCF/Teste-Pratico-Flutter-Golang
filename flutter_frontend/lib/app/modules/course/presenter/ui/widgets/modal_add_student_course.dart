@@ -1,6 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:cool_alert/cool_alert.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:cooler_alerts/cooler_alerts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -110,13 +109,13 @@ class ModalAddStudentCourse {
                                                     .addStudentCourse();
                                             if (success) {
                                               Modular.to.pop();
-                                              await CoolAlert.show(
+                                              await CoolerAlerts.show(
                                                 width: 500,
                                                 context: context,
                                                 type: CoolAlertType.success,
                                                 title:
                                                     "Aluno cadastrado no curso",
-                                                onConfirmBtnTap: () {
+                                                onConfirmBtnTap: (_) {
                                                   listCourseStore
                                                       .listAllStudent(
                                                           codeCourse);
@@ -124,7 +123,7 @@ class ModalAddStudentCourse {
                                                 closeOnConfirmBtnTap: true,
                                               );
                                             } else {
-                                              await CoolAlert.show(
+                                              await CoolerAlerts.show(
                                                 width: 500,
                                                 context: context,
                                                 type: CoolAlertType.error,

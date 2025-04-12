@@ -10,13 +10,13 @@ services:
     ports:
       - 5441:5432
     volumes:
-      - ./database/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
  
   backend:
     build:
       context: .
       dockerfile: ./Dockerfile
     ports:
-      - "8000:8000"
+      - "3000:3000"
 volumes:
   pg-data:
